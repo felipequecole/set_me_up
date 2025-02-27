@@ -18,6 +18,7 @@ Will it run everything without any single prompt? Nah, you will have to accept s
 
 ## Tools
 
+- chezmoi ✅
 - Zsh ✅
 - omz (Oh My Zsh) ✅
 - NeoVim ✅

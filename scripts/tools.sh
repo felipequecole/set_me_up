@@ -63,20 +63,9 @@ if ! command -v aws 2>&1 >/dev/null; then
   brew install awscli
 fi
 
-echo "Copy over zsh dotfile if not already installed"
-if [ ! -f "$HOME/.zshrc" ]; then
-  installed=$(cat $HOME/.zshrc | grep DO_NOT_REMOVE_INSTALLED_MARKER)
-  if [ -z "$installed" ]; then
-    cp ./dotfiles/.zshrc $HOME/.zshrc
-  fi
-fi
+echo "Install chezmoi"
+brew install chezmoi
 
-echo "Copy over tmux conf if not already installed"
-if [ ! -f "$HOME/.tmux.conf" ]; then
-  installed=$(cat $HOME/.tmux.conf | grep DO_NOT_REMOVE_INSTALLED_MARKER)
-  if [ -z "$installed" ]; then
-    cp ./dotfiles/.tmux.conf $HOME/.tmux.conf
-  fi
-fi
-
-
+echo "Installing dotfiles"
+chezmoi init $dotfiles_repo
+chezmoi apply -v

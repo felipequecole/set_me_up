@@ -63,6 +63,9 @@ if ! command -v aws 2>&1 >/dev/null; then
   brew install awscli
 fi
 
+echo "Install btop"
+brew install btop
+
 echo "Install chezmoi"
 brew install chezmoi
 

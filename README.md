@@ -29,6 +29,7 @@ Will it run everything without any single prompt? Nah, you will have to accept s
 - vscode ✅
 - tmux ✅
 - aws cli ✅
+- btop ✅
 - Jetbrains Toolbox ⛔
   - Jetbrains does not like automations, I guess
 
